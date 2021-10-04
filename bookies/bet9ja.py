@@ -46,7 +46,7 @@ for item in matches_section:
     print("Next: Click on GG/NG tab")
 
 markets_section = WebDriverWait(driver, 5).until \
-    (EC.presence_of_all_elements_located(
+        (EC.presence_of_all_elements_located(
         (By.XPATH, '//*[@id="wrapper"]/main/div/div/div/div[2]/div/div/div[1]/div[3]')))
 height = driver.execute_script("return document.body.scrollHeight")
 for item in markets_section:
@@ -80,8 +80,9 @@ for match_row in match_rows:
             # below are ternary operators to catch empty odds
             home_odds = float(odds[0].text) if type(float(odds[0].text)) == float else 'N/A'
             away_odds = float(odds[1].text) if type(float(odds[1].text)) == float else 'N/A'
-        matches_dicts.append({'id': match_rows.index(match_row) + 1, 'Match': f'{home_team} vs {away_team}', 'game_type': 'gg/ng',
-              'home_odds': home_odds, 'away_odds': away_odds})
+        matches_dicts.append(
+            {'id': match_rows.index(match_row) + 1, 'Match': f'{home_team} vs {away_team}', 'game_type': 'gg/ng',
+             'home_odds': home_odds, 'away_odds': away_odds})
 
     except Exception as e:
         print(f'Error was at item {match_rows.index(match_row) + 1}: {e}')  # index + 1 = Id
@@ -100,19 +101,25 @@ for item in matches_dicts:
     elif bool(search("Women", item["Match"])):
         new_match = item["Match"].split(" vs ")
         for team in new_match:
-            team += " (Women)"
+            new_match[new_match.index(team)] += " (Women)"
 
         item["Match"] = " vs ".join(new_match)
+
     elif bool(search("U19", item["Match"])):
         new_match = item["Match"].split(" vs ")
         for team in new_match:
-            team += " U19"
+            new_match[new_match.index(team)] += ""
         item["Match"] = " vs ".join(new_match)
 
+    else:
+        new_match = item["Match"].split(" vs ")
+        for team in new_match:
+            new_match[new_match.index(team)] += " (Main)"
 
+        item["Match"] = " vs ".join(new_match)
 
 bet9ja_df = pd.DataFrame(matches_dicts)
-bet9ja_df = bet9ja_df[bet9ja_df["Match"].str.contains('Srl')]
+# bet9ja_df = bet9ja_df[bet9ja_df["Match"].str.contains('Srl')]
 
 
 
