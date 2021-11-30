@@ -1,7 +1,6 @@
 # What is Arbitrage Betting?
 Arbitrage betting – also known as arbs betting, surebets, miraclebets and surewins – is a technique in which you place bets with different online betting companies to cover all the outcomes of a sporting event to guarantee yourself profit.
 
-So if there are two outcomes such as Both teams to score (GG) and both teams not to score (NG). Across 2 betting platforms, differences in odds can guarantee you profit regardless of what finally happens.
 
 For example, 1xBet could price a Floyd Mayweather Jr win at decimal odds of 1.48 (67.6% implied probability) whereas 888Sport could think he’s even more likely to win and offer odds of 1.36 (73.5% implied probability).
 
