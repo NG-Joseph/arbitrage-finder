@@ -1,7 +1,4 @@
-"""
-DISCLAIMER: This project is heavily inspired by DataDrivenInvestor's medium article on scraping from betting websites to find
-surebets. Find this article at: https://medium.datadriveninvestor.com/make-money-with-python-the-sports-arbitrage-project-3b09d81a0098
-"""
+
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
