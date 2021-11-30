@@ -11,13 +11,3 @@ As shown in this boxing example, generally there is only a slight difference bet
 
 This could mean that a £1,000 stake would return as little as £10 and as much as £100, which may not be worth the vast amounts of time taken to identify the surebet in the first place.
 
-**The profit margin for an arb bet isn't that high. It falls between 1-10%. But imagine if you rolled that money over for a new bet daily for 20 days a month**
-
-## What's in it for you?
-From my calculations, if you start with 5k, within a year if you don't take any money out you'd have 19 million naira (assuming your arb bets had an average of 3.5% profit)
-
-
-Arbitrate betting has to be one of the best-kept secrets in the betting world because it's what the 'serious' bettors do  to guarantee profits.However, the rarity in finding these games is what has discouraged so many people. So they end up paying to use arbitrage software which costs about 100 euros a month!
-
-## AIM 
-The primary aim of this project is to create a python program that scrapes data from multiple betting sites and automatically finds arb games between them. In future we can automate the betting process and connect it to our betting accounts to take advantage of these opportunities as fast as possible. But for now we'll stick with manual.
